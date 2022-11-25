@@ -1,0 +1,122 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1650px;
+  padding-top: 30px;
+}
+.left-header,
+.right-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  font-weight: 700;
+  font-size: 23px;
+}
+.nav-link:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  background-color: var(--green);
+  height: 5px;
+  width: 0%;
+  transition: all 0.5s ease-in-out;
+  border-radius: 12px;
+}
+.nav-link:hover::before {
+  width: 100%;
+}
+.play-btn {
+  position: relative;
+}
+.play-btn p {
+  position: absolute;
+  color: white;
+  left: 50%;
+  top: 45%;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+}
+.right-header p {
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+}
+.desktop-nav {
+  display: block;
+}
+.mobile-nav {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+  }
+  .left-header {
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    right: -600px;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    background-color: #015f80;
+    z-index: 70;
+    padding: 0rem 3rem;
+    padding-top: 5rem;
+    transition: all 1s ease-in-out;
+  }
+  .activeHeader {
+    right: 0;
+  }
+  .left-header > button {
+    width: 100%;
+    max-width: 300px;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 69;
+    width: 100%;
+    height: 100%;
+  }
+  header > svg {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 71;
+    position: relative;
+  }
+}
+@media screen and (max-width: 420px) {
+  .right-header p {
+    font-size: 10px;
+  }
+  .right-header {
+    gap: 20px;
+  }
+  .left-header > button {
+    max-width: 100%;
+  }
+  .left-header {
+    align-items: center;
+  }
+}

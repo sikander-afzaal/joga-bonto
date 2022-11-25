@@ -1,13 +1,61 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "8bit";
+  src: url("/public/assets/fonts/8-bit-pusab.ttf");
+}
+:root {
+  --green: #2cbb17;
+  --yellow: hsla(40, 100%, 57%, 1);
+}
+.bit {
+  font-family: "8bit", sans-serif;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 20px;
+  flex-direction: column;
+}
+body {
+  width: 100%;
+  background: linear-gradient(180deg, #015f80 0%, #003b50 41.98%, #00141b 100%);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.cta-btn,
+.cta-btn-inverse {
+  height: 47px;
+  width: max-content;
+  padding-inline: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  transition: all 0.6s ease-in-out;
+  cursor: pointer;
+}
+.cta-btn {
+  border: 2px solid transparent;
+  color: white;
+  background-color: var(--green);
+}
+.cta-btn:hover {
+  border-color: var(--green);
+  color: var(--green);
+  background-color: transparent;
+}
+.cta-btn-inverse {
+  border: 2px solid var(--green);
+  color: var(--green);
+  background-color: transparent;
+}
+.cta-btn-inverse:hover {
+  color: white;
+  background-color: var(--green);
 }
