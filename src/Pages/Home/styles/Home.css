@@ -1,0 +1,118 @@
+.home-page {
+  position: relative;
+  isolation: isolate;
+  min-height: calc(100vh - 120px);
+  margin-top: 20px;
+}
+.home-div {
+  width: 100%;
+  max-width: 1650px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.left-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: max-content;
+  gap: 30px;
+}
+.left-home h2 {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 75px;
+  text-align: center;
+  color: white;
+}
+.left-home h2 span {
+  color: var(--yellow);
+}
+.left-home .btn-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+}
+.left-home .btn-div button {
+  text-transform: uppercase;
+  width: 216px;
+  padding: 0px;
+  height: 49.35px;
+  font-weight: 400;
+  font-size: 14px;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.13));
+  border-radius: 6px;
+}
+.left-home .btn-div .cta-btn-inverse {
+  color: white;
+}
+.home-div > img {
+  mix-blend-mode: screen;
+  max-width: 668px;
+}
+.home-bg {
+  position: absolute;
+  z-index: -2;
+  right: 0;
+  bottom: 0;
+}
+@media screen and (max-width: 1511px) {
+  .left-home h2 {
+    font-size: 30px;
+    line-height: 1.5;
+  }
+  .left-home img {
+    max-width: 260px;
+  }
+  .left-home .btn-div button {
+    width: 150px;
+    font-size: 10px;
+    gap: 20px;
+  }
+  .home-div > img {
+    max-width: 500px;
+    width: 100%;
+  }
+  .home-bg {
+    max-width: 600px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1115px) {
+  .home-div {
+    flex-direction: column;
+    gap: 80px;
+  }
+}
+@media screen and (max-width: 613px) {
+  .left-home .btn-div {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+  .left-home .btn-div button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 510px) {
+  .home-div {
+    gap: 50px;
+  }
+  .home-page {
+    margin-top: 0px;
+  }
+  .left-home {
+    width: 100%;
+  }
+  .left-home h2 {
+    font-size: 25px;
+  }
+  .left-home h2 br {
+    display: none;
+  }
+}
