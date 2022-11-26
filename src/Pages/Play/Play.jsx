@@ -1,6 +1,10 @@
 import "./styles/Play.css";
 
 const Play = () => {
+  const addSound = () => {
+    const btnSound = new Audio("/assets/sounds/sound1.mp3");
+    btnSound.play();
+  };
   return (
     <div className="container play-page">
       <img src="/assets/play-left.png" alt="" className="play-left" />
@@ -19,8 +23,12 @@ const Play = () => {
             className="bit"
             placeholder="Token amount to play"
           />
-          <button className="cta-btn bit">Approve</button>
-          <button className="cta-btn bit">Next</button>
+          <button onClick={addSound} className="cta-btn bit">
+            Approve
+          </button>
+          <button onClick={addSound} className="cta-btn bit">
+            Next
+          </button>
         </div>
       </div>
     </div>

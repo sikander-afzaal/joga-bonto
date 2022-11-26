@@ -2,7 +2,7 @@ import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [header, setHeader] = useState(false);
@@ -16,24 +16,28 @@ const Header = () => {
     }
   }, [pathname]);
 
+  const addSound = () => {
+    const btnSound = new Audio("/assets/sounds/sound2.mp3");
+    btnSound.play();
+  };
   return (
     <div className="container">
       <header>
         <div className={`left-header ${header ? "activeHeader" : ""}`}>
-          <a href="#" className="nav-link">
+          <Link to={"/"} className="nav-link">
             Home
-          </a>
-          <a href="#" className="nav-link">
+          </Link>
+          <Link to={"/nft"} className="nav-link">
             NFT
-          </a>
+          </Link>
           <a href="#" className="nav-link">
             Create
           </a>
           {showPlayBtn && (
-            <a href="#" className="play-btn">
+            <Link onClick={addSound} to={"/play"} className="play-btn">
               <p>Play</p>
               <img src="/assets/play-btn-bg.png" alt="" />
-            </a>
+            </Link>
           )}
           <button className=" cta-btn-inverse mobile-nav">
             Connect Wallet

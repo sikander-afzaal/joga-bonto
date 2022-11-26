@@ -1,6 +1,11 @@
 import "./styles/Home.css";
 
 const Home = () => {
+  const addSound = () => {
+    const btnSound = new Audio("/assets/sounds/sound1.mp3");
+    btnSound.play();
+  };
+
   return (
     <div className="container home-page">
       <img src="/assets/hero-circle.png" className="home-bg" />
@@ -13,9 +18,15 @@ const Home = () => {
             button at the top.
           </h2>
           <div className="btn-div">
-            <button className="cta-btn-inverse bit">PVE</button>
-            <button className="cta-btn-inverse bit">PVP</button>
-            <button className="cta-btn bit">Tournament</button>
+            <button onClick={addSound} className="cta-btn-inverse bit">
+              PVE
+            </button>
+            <button onClick={addSound} className="cta-btn-inverse bit">
+              PVP
+            </button>
+            <button onClick={addSound} className="cta-btn bit">
+              Tournament
+            </button>
           </div>
         </div>
         <img src="/assets/footballer.png" alt="" />
