@@ -1,10 +1,21 @@
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const [header, setHeader] = useState(false);
+  const [showPlayBtn, setShowPlayBtn] = useState(true);
+  const { pathname } = useLocation();
+  useEffect(() => {
+    if (pathname === "/") {
+      setShowPlayBtn(true);
+    } else {
+      setShowPlayBtn(false);
+    }
+  }, [pathname]);
+
   return (
     <div className="container">
       <header>
@@ -18,10 +29,12 @@ const Header = () => {
           <a href="#" className="nav-link">
             Create
           </a>
-          <a href="#" className="play-btn">
-            <p>Play</p>
-            <img src="/assets/play-btn-bg.png" alt="" />
-          </a>{" "}
+          {showPlayBtn && (
+            <a href="#" className="play-btn">
+              <p>Play</p>
+              <img src="/assets/play-btn-bg.png" alt="" />
+            </a>
+          )}
           <button className=" cta-btn-inverse mobile-nav">
             Connect Wallet
           </button>

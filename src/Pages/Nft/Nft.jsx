@@ -3,6 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NftBox from "../../Components/NftBox/NftBox";
 import "./styles/Nft.css";
 
+const SuccesfulNotif = ({ text }) => {
+  return <div className="created-notif bit">{text}</div>;
+};
+
 const Nft = () => {
   return (
     <div className="nft-page container">
