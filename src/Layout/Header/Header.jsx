@@ -20,38 +20,69 @@ const Header = () => {
     const btnSound = new Audio("/assets/sounds/sound2.mp3");
     btnSound.play();
   };
+  const addSound2 = () => {
+    const btnSound = new Audio("/assets/sounds/sound2.mp3");
+    btnSound.play();
+  };
   return (
     <div className="container">
       <header>
         <div className={`left-header ${header ? "activeHeader" : ""}`}>
-          <Link to={"/"} className="nav-link">
+          <Link onClick={() => setHeader(false)} to={"/"} className="nav-link">
             Home
           </Link>
-          <Link to={"/nft"} className="nav-link">
+          <Link
+            onClick={() => setHeader(false)}
+            to={"/nft"}
+            className="nav-link"
+          >
             NFT
           </Link>
-          <a href="#" className="nav-link">
+          <a onClick={() => setHeader(false)} href="#" className="nav-link">
             Create
           </a>
           {showPlayBtn && (
-            <Link onClick={addSound} to={"/play"} className="play-btn">
+            <Link
+              onClick={() => {
+                addSound();
+                setHeader(false);
+              }}
+              to={"/play"}
+              className="play-btn"
+            >
               <p>Play</p>
               <img src="/assets/play-btn-bg.png" alt="" />
             </Link>
           )}
-          <button className=" cta-btn-inverse mobile-nav">
+          <button
+            onClick={() => {
+              addSound2();
+              setHeader(false);
+            }}
+            className=" cta-btn-inverse mobile-nav"
+          >
             Connect Wallet
           </button>
-          <button className="cta-btn mobile-nav">Buy Token</button>
+          <button
+            onClick={() => {
+              addSound2();
+              setHeader(false);
+            }}
+            className="cta-btn mobile-nav"
+          >
+            Buy Token
+          </button>
         </div>
         <div className="right-header">
           <p className="bit">Token Price</p>
           <p className="bit">1.42</p>
           <p className="bit">$WC</p>
-          <button className=" cta-btn-inverse desktop-nav">
+          <button onClick={addSound2} className=" cta-btn-inverse desktop-nav">
             Connect Wallet
           </button>
-          <button className="cta-btn desktop-nav">Buy Token</button>
+          <button onClick={addSound2} className="cta-btn desktop-nav">
+            Buy Token
+          </button>
         </div>
         {header && (
           <div onClick={() => setHeader(false)} className="overlay"></div>
