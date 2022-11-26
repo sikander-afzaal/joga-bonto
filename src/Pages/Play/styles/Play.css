@@ -1,0 +1,133 @@
+.play-page {
+  position: relative;
+  min-height: calc(100vh - 120px);
+  justify-content: flex-start;
+  padding-top: 130px;
+}
+.play-foot {
+  opacity: 0.2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  z-index: -1;
+  height: 100%;
+  object-fit: contain;
+}
+.play-left {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  max-width: 100%;
+  object-fit: contain;
+  z-index: -2;
+}
+.play-right {
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+  max-width: 100%;
+  object-fit: contain;
+  z-index: -2;
+}
+.play-div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1073px;
+  flex-direction: column;
+  gap: 50px;
+}
+.play-div > img {
+  max-width: 500px;
+  object-fit: contain;
+}
+.difficulty {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+}
+
+.difficulty > h2 {
+  height: 70.21px;
+  width: 100%;
+  background: rgba(217, 217, 217, 0.4);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.13);
+  border-radius: 6px;
+  font-weight: 400;
+  font-size: 17px;
+  color: white;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+}
+.difficulty > .selected-dif {
+  background: var(--yellow);
+  opacity: 1;
+}
+.amount {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+.amount > input {
+  width: 360px;
+  height: 52px;
+  background-color: white;
+  font-weight: 500;
+  font-size: 13px;
+  border: none;
+  padding-left: 15px;
+  color: rgba(146, 143, 143, 0.64);
+}
+.amount button {
+  height: 28.38px;
+  font-size: 10px;
+}
+@media screen and (max-width: 900px) {
+  .play-left,
+  .play-right {
+    display: none;
+  }
+  .play-page {
+    justify-content: center;
+    padding-top: 0px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .amount {
+    width: 100%;
+    flex-direction: column;
+  }
+  .amount input {
+    width: 100%;
+  }
+  .amount button {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+  }
+  .difficulty {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .difficulty > h2 {
+    height: 60px;
+    font-size: 14px;
+  }
+  .play-div > img {
+    max-width: 300px;
+  }
+  .play-div {
+    align-items: center;
+  }
+  .play-page {
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+}

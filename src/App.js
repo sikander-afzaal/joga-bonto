@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Layout/Header/Header";
 import Home from "./Pages/Home/Home";
 import Nft from "./Pages/Nft/Nft";
+import Play from "./Pages/Play/Play";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route element={<Home />} path="/" />
         <Route element={<Nft />} path="/nft" />
+        <Route element={<Play />} path="/play" />
       </Routes>
     </div>
   );
