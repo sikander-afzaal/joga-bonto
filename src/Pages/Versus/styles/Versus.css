@@ -1,0 +1,64 @@
+.versus-div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  min-height: calc(100vh - 120px);
+  max-width: 1650px;
+  padding-bottom: 40px;
+}
+.versus-div > p {
+  color: white;
+  font-size: 22px;
+}
+.versus-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  width: 100%;
+  margin-top: 20px;
+  gap: 30px;
+}
+.versus-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 144px;
+  gap: 20px;
+  padding: 20px 0px;
+  width: 100%;
+}
+
+.versus-box .btn-div {
+  gap: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.versus-box .btn-div button {
+  height: 28.38px;
+  font-size: 12px;
+}
+.versus-box > img {
+  width: 75px;
+  mix-blend-mode: color-dodge;
+  object-fit: contain;
+  margin-left: 20px;
+}
+@media screen and (max-width: 1283px) {
+  .versus-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .versus-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 630px) {
+  .versus-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

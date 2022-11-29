@@ -1,0 +1,14 @@
+.diff-btn {
+  width: 100%;
+  background-color: black;
+  border-radius: 100vh;
+  color: white;
+  height: 46px;
+  border: none;
+  max-width: 250px;
+  font-size: 17px;
+  cursor: pointer;
+}
+.diff-modal {
+  gap: 25px !important;
+}

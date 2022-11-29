@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NftBox from "../../Components/NftBox/NftBox";
 import { useState } from "react";
 import SuccessModal from "../../Components/SuccessModal/SuccessModal";
+import DifficultyModal from "../../Components/DifficultyModal/DifficultyModal";
 
 const Team = () => {
   const [selectedTeam, setSelectedTeam] = useState([]);
@@ -23,6 +24,7 @@ const Team = () => {
           btnText={"Yes"}
         />
       } */}
+      {<DifficultyModal />}
       <img src="/assets/nft-bg.png" alt="" />
       <div className="team-div">
         <div className="top-team">
