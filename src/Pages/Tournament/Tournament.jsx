@@ -1,8 +1,15 @@
 import "./styles/Tournament.css";
 
 const Tournament = () => {
+  const addSound = () => {
+    const btnSound = new Audio("/assets/sounds/sound1.mp3");
+    btnSound.play();
+  };
   return (
     <div className="container tournament-page">
+      {" "}
+      <img src="/assets/play-left.png" alt="" className="play-left" />
+      <img src="/assets/play-right.png" alt="" className="play-right" />
       <div className="tournament-div">
         <h1 className="bit">TOURNAMENT- SEASON 1</h1>
         <div className="top-tournament">
@@ -10,12 +17,16 @@ const Tournament = () => {
             <div className="tour-box">
               <h3 className="bit">Registration Pharse</h3>
               <p>01 Day 12 Hours 34 INS</p>
-              <button className="cta-btn bit">Register</button>
+              <button onClick={addSound} className="cta-btn bit">
+                Register
+              </button>
             </div>
             <div className="tour-box">
               <h3 className="bit">Playing Pharse</h3>
               <p>-</p>
-              <button className="cta-btn bit">Register</button>
+              <button onClick={addSound} className="cta-btn bit">
+                Register
+              </button>
             </div>
           </div>
           <div className="winner-box">
