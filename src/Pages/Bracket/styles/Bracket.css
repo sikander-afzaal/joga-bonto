@@ -1,11 +1,60 @@
 .bracket-div {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  max-width: 1650px;
+  display: grid;
+  grid-template-columns: auto 200px auto;
   min-height: calc(100vh - 120px);
   padding-top: 20px;
   padding-bottom: 40px;
+  width: 2000px;
+  position: relative;
+}
+.bracket-wrapper {
   overflow-x: auto;
+  max-width: 1650px;
+  width: 100%;
+}
+.rotated-bracket {
+  transform: rotateZ(180deg);
+}
+.center-bracket {
+  width: 200px;
+  height: 50px;
+  background-color: var(--yellow);
+  align-self: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.center-bracket::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #707070;
+  width: calc(100% + 80px);
+  height: 1px;
+}
+.bracket-heading {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  z-index: 30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+}
+.bracket-heading h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+.bracket-heading p {
+  font-weight: 300;
+  font-size: 23px;
 }

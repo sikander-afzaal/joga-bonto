@@ -150,12 +150,28 @@ const Bracket = () => {
   ];
   return (
     <div className="container bracket-page">
-      <div className="bracket-div">
-        <Rounds
-          mobileBreakpoint={0}
-          rounds={rounds}
-          renderSeedComponent={CustomSeed}
-        />
+      <div className="bracket-wrapper">
+        <div className="bracket-div">
+          <div className="bracket-heading">
+            <h2 className="bit">TOURNAMENT - SEASON 1</h2>
+            <p>Current Level: 1/12</p>
+            <p>01 Day 12 Hours 34 INS</p>
+            <button className="cta-btn bit">EDIT TEAM</button>
+          </div>
+          <Rounds
+            mobileBreakpoint={0}
+            rounds={rounds}
+            renderSeedComponent={CustomSeed}
+          />
+          <div className="center-bracket">Winner</div>
+          <div className="rotated-bracket">
+            <Rounds
+              mobileBreakpoint={0}
+              rounds={rounds}
+              renderSeedComponent={CustomSeedRightSide}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -171,6 +187,30 @@ const CustomSeed = ({ seed, breakpoint }) => {
           <SeedTeam
             style={{
               color: "white",
+              backgroundColor: "var(--yellow)",
+              height: "40px",
+              textAlign: "center",
+              justifyContent: "center",
+            }}
+          >
+            {seed.teams[0]?.name || "NO TEAM "}
+          </SeedTeam>
+        </div>
+      </SeedItem>
+    </Seed>
+  );
+};
+const CustomSeedRightSide = ({ seed, breakpoint }) => {
+  return (
+    <Seed mobileBreakpoint={breakpoint} style={{ fontSize: 12 }}>
+      <SeedItem>
+        <div>
+          <SeedTeam
+            style={{
+              transform: "rotate(180deg)",
+              color: "white",
+              textAlign: "center",
+              justifyContent: "center",
               backgroundColor: "var(--yellow)",
               height: "40px",
             }}
