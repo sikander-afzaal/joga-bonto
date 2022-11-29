@@ -1,0 +1,131 @@
+.tournament-page {
+  position: relative;
+}
+.tournament-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+  max-width: 1650px;
+  width: 100%;
+  min-height: calc(100vh -120px);
+}
+.tournament-div > h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+.top-tournament {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  margin-top: 40px;
+}
+.left-tour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.tour-box {
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 371px;
+  padding: 20px;
+}
+.tour-box h3 {
+  font-size: 13px;
+  font-weight: 400;
+}
+.tour-box p {
+  font-weight: 300;
+  font-size: 23px;
+}
+.tour-box button {
+  height: 28.38px;
+  font-size: 10px;
+  font-weight: 400;
+}
+.winner-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #111;
+  color: white;
+  width: 505px;
+  padding: 20px;
+}
+.winner-box h3 {
+  font-size: 13px;
+  font-weight: 400;
+}
+.bottom-tournament {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  min-height: 600px;
+  background-color: var(--yellow);
+  position: relative;
+  margin-top: 70px;
+  padding: 30px;
+  color: white;
+}
+.bottom-tournament:before {
+  content: "";
+  background-color: var(--green);
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: calc(100% + 10px);
+  left: 10px;
+  top: -10px;
+}
+.bottom-tournament h2 {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.bottom-tournament p {
+  font-weight: 400;
+  font-size: 14px;
+}
+@media screen and (max-width: 1350px) {
+  .top-tournament {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .tour-box,
+  .winner-box {
+    width: 100%;
+    min-height: 166px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .left-tour {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .tournament-div h1 {
+    font-size: 15px;
+  }
+  .tour-box p {
+    font-size: 20px;
+  }
+  .bottom-tournament h2 {
+    font-size: 14px;
+  }
+  .bottom-tournament p {
+    font-size: 10px;
+  }
+}

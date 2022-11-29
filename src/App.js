@@ -6,6 +6,7 @@ import Nft from "./Pages/Nft/Nft";
 import Play from "./Pages/Play/Play";
 import Team from "./Pages/Team/Team";
 import Versus from "./Pages/Versus/Versus";
+import Tournament from "./Pages/Tournament/Tournament";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route element={<Play />} path="/play" />
         <Route element={<Team />} path="/team" />
         <Route element={<Versus />} path="/versus" />
+        <Route element={<Tournament />} path="/tournament" />
       </Routes>
     </div>
   );
