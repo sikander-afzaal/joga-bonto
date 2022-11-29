@@ -1,11 +1,41 @@
+.bracket-page {
+  position: relative;
+  overflow-x: hidden;
+}
+.bracket-circle1,
+.bracket-circle2,
+.bracket-circle3 {
+  border-radius: 50%;
+  background-color: var(--green);
+  width: 284px;
+  height: 284px;
+  position: absolute;
+  z-index: -1;
+}
+.bracket-circle1,
+.bracket-circle2 {
+  left: 0;
+  transform: translateX(-50%);
+}
+.bracket-circle1 {
+  top: 20%;
+}
+.bracket-circle2 {
+  bottom: 10%;
+}
+.bracket-circle3 {
+  right: -5%;
+  bottom: 10%;
+}
 .bracket-div {
   display: grid;
   grid-template-columns: auto 200px auto;
   min-height: calc(100vh - 120px);
   padding-top: 20px;
   padding-bottom: 40px;
-  width: 2000px;
+  min-width: 2470px;
   position: relative;
+  overflow-x: hidden;
 }
 .bracket-wrapper {
   overflow-x: auto;
@@ -48,6 +78,7 @@
   align-items: center;
   flex-direction: column;
   gap: 10px;
+  transform: translateX(-50%);
   color: white;
 }
 .bracket-heading h2 {

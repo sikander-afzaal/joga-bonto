@@ -152,6 +152,10 @@ const Bracket = () => {
     <div className="container bracket-page">
       <div className="bracket-wrapper">
         <div className="bracket-div">
+          {" "}
+          <div className="bracket-circle1"></div>
+          <div className="bracket-circle2"></div>
+          <div className="bracket-circle3"></div>
           <div className="bracket-heading">
             <h2 className="bit">TOURNAMENT - SEASON 1</h2>
             <p>Current Level: 1/12</p>
