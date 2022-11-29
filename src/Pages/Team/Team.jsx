@@ -24,7 +24,7 @@ const Team = () => {
           btnText={"Yes"}
         />
       } */}
-      {<DifficultyModal />}
+      {/* {<DifficultyModal />} */}
       <img src="/assets/nft-bg.png" alt="" />
       <div className="team-div">
         <div className="top-team">

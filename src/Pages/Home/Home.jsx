@@ -29,7 +29,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <img src="/assets/footballer.png" alt="" />
+        <img src="/assets/footballer.svg" alt="" />
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ const Play = () => {
     <div className="container play-page">
       <img src="/assets/play-left.png" alt="" className="play-left" />
       <img src="/assets/play-right.png" alt="" className="play-right" />
-      <img className="play-foot" src="/assets/footballer.png" alt="" />
+      <img className="play-foot" src="/assets/footballer.svg" alt="" />
       <div className="play-div">
         <img src="/assets/logo.png" alt="" />
         <div className="difficulty">
