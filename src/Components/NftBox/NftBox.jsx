@@ -1,8 +1,20 @@
 import "./NftBox.css";
 
-const NftBox = ({ img, name, stats: { power, sheild, aim }, health }) => {
+const NftBox = ({
+  img,
+  name,
+  stats: { power, sheild, aim },
+  health,
+  setSelectedTeam,
+}) => {
   return (
-    <div className="nft-box">
+    <div
+      className="nft-box"
+      onClick={() => {
+        const statsPlayer = { power, sheild, aim };
+        setSelectedTeam(name, statsPlayer, health);
+      }}
+    >
       <img src={img} alt="" />
       <div className="bottom-nft-box">
         <h2 className="bit">{name}</h2>

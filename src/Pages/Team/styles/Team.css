@@ -1,0 +1,140 @@
+.team-page {
+  position: relative;
+}
+.team-page > img {
+  position: absolute;
+  max-width: 530px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.team-div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1650px;
+  min-height: calc(100vh - 120px);
+  justify-content: flex-start;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.top-team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+.top-team > div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.top-team > div:first-of-type p {
+  color: white;
+  font-size: 22px;
+  font-weight: 400;
+}
+.top-team > div:first-of-type > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.selected-teams {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  width: 100%;
+  gap: 30px;
+}
+.selected-team {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--yellow);
+  padding: 20px;
+  color: white;
+  position: relative;
+  height: 100%;
+  min-height: 160px;
+  gap: 20px;
+}
+.selected-team > h2 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+}
+.selected-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.selected-stats > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.selected-stats h3 {
+  line-height: 1;
+  font-weight: 400;
+  font-size: 14px;
+}
+.selected-team > .bar {
+  overflow: hidden;
+  position: relative;
+}
+.inner-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: var(--green);
+}
+.selected-team > svg {
+  position: absolute;
+  color: white;
+  right: 2%;
+  top: 3%;
+  font-size: 25px;
+  cursor: pointer;
+}
+.bottom-team {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 1413px) {
+  .selected-teams {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 750px) {
+  .selected-teams {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  .top-team > div:first-of-type {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .top-team > div:first-of-type > div {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .top-team > div:first-of-type p {
+    font-size: 18px;
+  }
+}
